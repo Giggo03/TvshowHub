@@ -31,6 +31,7 @@ def user_alternatives(username):
         print("4  - Add a review for a TV show")
         print("5  - See actors and how many shows they appear in")
         print("6  - Show actors and their characters in a Tv show")
+        print("7  - Show average rating for tv shows")
         print("0  - Exit program")
         print("="*50)
         menu_choice = input("\033[93mSelect an option: \033[0m").strip().lower()
@@ -47,6 +48,8 @@ def user_alternatives(username):
             temp.list_actors_tvshow_count()
         elif menu_choice == "6":
             temp.show_actors_in_show()
+        elif menu_choice == "7":
+            temp.show_average_ratings()
         elif menu_choice == "0" or menu_choice == "exit":
             print("\nThank you for using TV Series Hub!\n")
             exit()

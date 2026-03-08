@@ -34,6 +34,8 @@ def user_add_review(username):
     cursor = conn.cursor()
     try:
         user_id = check_user(username)
+        if user_id is None:
+            user_id = create_user(username)
         cursor.execute("SELECT tvshow_id, title FROM tvshow ORDER BY title")
         shows = cursor.fetchall()
         print("\nAvailable TV Shows:\n")
